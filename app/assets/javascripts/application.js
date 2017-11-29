@@ -11,6 +11,12 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).on('turbolinks:load',function() {
+    $('#search').on('keyup', function() {
+        $('#search_form').submit();
+    });
+});
